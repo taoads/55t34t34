@@ -3,14 +3,26 @@
 <html lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Base64 在线编码解码 | Base64 加密解密 - Base64.im</title>
+<title>Base64 在线编码解码 | Base64 加密解密 - Base64.us</title>
 <meta name="keywords" content="Base64,Base64编码,Base64解码,Base64加密,Base64解密" />
-<script src="https://base64-afs.pages.dev/vendor/jquery-3.2.1.min.js" type="text/javascript"></script>
-<script src="https://base64-afs.pages.dev/vendor/main.js" type="text/javascript"></script>
-<script src="https://base64-afs.pages.dev/vendor/clipboard.min.js" type="text/javascript"></script>
-<script src="https://base64-afs.pages.dev/vendor/bootstrap.min.js" type="text/javascript"></script>
-<link href="https://base64-afs.pages.dev/vendor/bootstrap.min.css" rel="stylesheet">
+<script src="https://www.dogecloud.com/vendor/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="https://base64.us/js/main.js" type="text/javascript"></script>
+<script src="https://www.dogecloud.com/vendor/clipboard.min.js" type="text/javascript"></script>
+<script src="https://www.dogecloud.com/vendor/bootstrap-3.3.4/bootstrap.min.js" type="text/javascript"></script>
+<link href="https://www.dogecloud.com/vendor/bootstrap-3.3.4/bootstrap.min.css" rel="stylesheet">
 <link rel="icon" href="/favicon.png" type="image/png"/>
+<script>
+  const userLang = navigator.language || navigator.userLanguage; 
+  const lang = userLang.split('-')[0];
+
+  const supportedLangs = ['en', 'zh', 'fr', 'ko', 'ru', 'tw', 'sg', 'vi', 'de', 'es', 'ja'];
+
+  if (supportedLangs.includes(lang)) {
+    window.location.href = `/${lang}/index.html`;
+  } else {
+    window.location.href = `/en/index.html`; // 默认语言
+  }
+</script>
 <style type="text/css">
 body {
 	padding-top: 40px;
@@ -277,7 +289,7 @@ p {
 					<div class="modal-title" id="modalDogeLabel" style="font-weight: bold; font-size: 16px;">了解多吉云</div>
 				</div>
 				<div class="modal-body" id="ModalBody">
-					<p>感谢大家使用 Base64.im。<b>多吉云</b>是本站作者所在团队开发并运营的公有云平台，为广大个人和企业开发者提供<a target="_blank" href="https://www.dogecloud.com/product/vod">视频云点播</a>、<a target="_blank" href="https://www.dogecloud.com/product/oss">对象存储</a>、<a target="_blank" href="https://www.dogecloud.com/product/cdn">融合 CDN</a> 等互联网基础产品，上线至今已稳定运营 5 年时间。</p>
+					<p>感谢大家使用 Base64.us。<b>多吉云</b>是本站作者所在团队开发并运营的公有云平台，为广大个人和企业开发者提供<a target="_blank" href="https://www.dogecloud.com/product/vod">视频云点播</a>、<a target="_blank" href="https://www.dogecloud.com/product/oss">对象存储</a>、<a target="_blank" href="https://www.dogecloud.com/product/cdn">融合 CDN</a> 等互联网基础产品，上线至今已稳定运营 5 年时间。</p>
 					<p>视频云点播是多吉云的主要产品，可以很方便地将您的视频托管到我们平台并在您的网站、App 中播放，为您节省大量带宽支出。同时我们也提供云存储、融合 CDN 加速这样的存储分发类产品。我们产品的底层都是大厂（阿里云/腾讯云）的对象存储和 CDN，安全可靠。</p>
 					<p>正因我们整体业务体量较大，我们可以向您提供更优惠的产品价格。下面列举一些主要计费项价格：</p>
 					<table class="price-table">
@@ -323,7 +335,7 @@ p {
 		</div>
 	</div>
 	<div class="main">
-		<h3><span class="label label-success label-site">Base64.im</span>Base64 在线编码解码<small class="ml6">(最好用的 Base64 在线工具)</small></h3>
+		<h3><span class="label label-success label-site">Base64.us</span>Base64 在线编码解码<small class="ml6">(最好用的 Base64 在线工具)</small></h3>
 		<ol class="breadcrumb">
 			<li class="active">Base64</li>
 			<li><a title="URL 在线编码解码工具" href="#" onclick="alert('暂未开通~');">URLEncode</a></li>
@@ -348,9 +360,17 @@ p {
 				Code by <a id="me" tabindex="0" role="button" data-html="true" data-trigger="click" data-container="body" data-toggle="popover" data-placement="top" data-content="有什么意见建议想法，请联系我！<br><small><a href='https://weibo.com/n/二环同学' target='_blank'><img src='https://weibo.com/favicon.ico' class='icon-site mr2'>二环同学</a> <a href='https://wpa.qq.com/msgrd?v=3&uin=541231936' target='_blank'><img src='https://im.qq.com/favicon.ico' class='icon-site mr2'>541231936</a> <img src='https://weixin.qq.com/zh_CN/htmledition/images/favicon1fbcbe.ico' class='icon-site mr2'>541231936<br>Email: <a href='mailto:acircle@dogecloud.com'>acircle at dogecloud.com</a></small>">@二环同学</a>
 				| 
 				<label class="btn btn-link" style="padding: 0; color: rgba(255, 50, 0, 0.8); font-weight: bold;" data-toggle="modal" data-target="#modalDoge">多吉云视频点播、CDN、对象存储，流量￥0.05/GB起步</label>
-				<!--<div style="display:none">
-TONGJIDAIMA
-				</div>-->
+				<div style="display:none">
+					<script>
+						var _hmt = _hmt || [];
+						(function() {
+						var hm = document.createElement("script");
+						hm.src = "https://hm.baidu.com/hm.js?17df78a2c47605344f3338c54523c07e";
+						var s = document.getElementsByTagName("script")[0]; 
+						s.parentNode.insertBefore(hm, s);
+						})();
+					</script>
+				</div>
 			</div>
 			<div data-toggle="buttons">
 				<label class="btn btn-link" style="padding-right:4px;" data-toggle="modal" data-target="#modalCode">
@@ -666,7 +686,7 @@ TONGJIDAIMA
 	});
 
 	function makeFragment(e, code){
-		$(e).prop('outerHTML', '<input id="select" type="text" onfocus="$(this).select();" value="' + 'https://Base64.im/#' + code + '">');
+		$(e).prop('outerHTML', '<input id="select" type="text" onfocus="$(this).select();" value="' + 'https://base64.us/#' + code + '">');
 		$("#select").focus();
 		return false;
 	}
