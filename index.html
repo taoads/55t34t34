@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>域名出售 | Domain for Sale</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 100px 50px 50px; /* 调整上方的 padding 使整体下移 */
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: auto;
+            color: #333;
+        }
+        h1 {
+            color: #222;
+        }
+        p {
+            font-size: 18px;
+            color: #444;
+        }
+        .email {
+            font-size: 20px;
+            font-weight: bold;
+            color: #d9534f;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .domain {
+            font-size: 22px;
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>域名出售 / Domain for Sale</h1>
+        <p class="domain">AIGC.KR</p>
+        <p>该域名正在出售，如有意向，请联系：</p>
+        <p>This domain is for sale. If you are interested, please contact:</p>
+        <p class="email" id="email"></p>
+    </div>
+    <script>
+        // Base64 编码的邮箱地址
+        let encodedEmail = "a29vYm95QGZveG1haWwuY29t";
+        let decodedEmail = atob(encodedEmail);
+        let emailElement = document.getElementById('email');
+        emailElement.innerText = decodedEmail;
+        emailElement.href = "mailto:" + decodedEmail;
+        emailElement.addEventListener('click', function() {
+            window.location.href = "mailto:" + decodedEmail;
+        });
+    </script>
+</body>
+</html>
